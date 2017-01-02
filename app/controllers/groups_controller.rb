@@ -6,8 +6,8 @@ def index
 end
 
 def show
-  @group =Group.find(params[:id])
-  @posts =@group.posts
+  @group = Group.find(params[:id])
+  @posts = @group.posts.order("created_at DESC")
 end
 
 def edit
